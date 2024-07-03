@@ -1,0 +1,39 @@
+*데이터 사이언스 
+- 직무 : 데이터 엔지니어 / 애널리스트 / 사이언티스트, 머신러닝 엔지니어 / 리서처
+딥 러닝 -> 머신러닝에 포함된 분야
+
+*데이터 사이언스 ToolKit
+
+*jupyter notebook은 셀의 제일 마지막 변수의 값만 출력(print 필요 없음)
+- 마크다운 : **a** -> 볼드 / *a* -> 기울어지게 
+
+*Numpy
+- np.arange(n, m) : n부터 m-1까지 만듦
+- array1.size : 총 요소 개수 / array1.shape : 몇 *몇 배열인지
+- 슬라이싱 : array1[2:6] : 2부터 5까지
+- 불린 인덱싱 : array1 > 10000 -> True 인지 아닌지 배열로 출력(비교연산 가능) -> 마스킹이라고도 함
+- .mean, .min, .max, .sum 가능
+- 한번에 사칙연산 가능
+
+
+*Matplotlib
+plt.bar, plt.plot, plt.scatter
+사이즈 바꾸고 싶으면 사전에 설정하기(figure)
+한글로 타이틀 설정하면 오류 생김 -> 제목 전에 폰트를 바꿔주는 코드 추가 - plt.rc('font', family = 'Malgun Gothic')
+
+
+*Pandas - > 표 형태 데이터를 간편하게 사용
+- numpy array 문제점 : 형식을 하나로 통일해야 함
+- pd.DataFrame(행렬 이름 설정도 가능
+- Series 타입 : 1차원 배열
+- 각 인덱스 값끼리 곱해서 새로운 시리즈 생성 가능
+
+*CSV : 파일에 헤더 유무 잘 확인하기 (없으면 header = None)
+인덱스는 절대 겹치면 안 됨, n번째 컬럼 쓰고싶으면 0이나 1 등 인덱스 숫자 쓰면 됨
+players_df.sort_values(by='matches', ascending=False)
+players_df.describe()
+column slicing은 오류임
+- 특정 조건필터링 : burger_df.loc[burger_df['calories'] < 500]
+- loc, iloc로 값 직접 바꿀 수 있음(통째로도 가능)
+- 조건 넣어서 값 추가/수정도 가능
+- 그래프 그리기 : sales_df.plot(x = , y = , kind = )    -> bar, pie(y만 넣었을 때), scatter 가능 
